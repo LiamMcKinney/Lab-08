@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Manipulation</title>
+</head>
+<body>
+    <p id="target">Dummy text</p>
+
+    <h2>Border style</h2>
+    <input type="text" id="borderR" value="00">red (00-FF)
+    <input type="text" id="borderG" value="00">green (00-FF)
+    <input type="text" id="borderB" value="00">blue (00-FF)
+    <input type="text" id="borderW" value="1">width
+
+    <h2>Background Color</h2>
+    <input type="text" id="bgR" value="FF">red (00-FF)
+    <input type="text" id="bgG" value="FF">green (00-FF)
+    <input type="text" id="bgB" value="FF">blue (00-FF)
+
+    <br><button onclick="updateStyle()">Update</button>
+
+    <script>
+        function updateStyle(){
+            let val = id => {return document.getElementById(id).value}
+
+            let p = document.getElementById("target")
+
+            p.style.borderColor = "#" + val("borderR") + val("borderG") + val("borderB")
+            p.style.borderWidth = val("borderW") + "px"
+            p.style.borderStyle = "solid"
+
+            p.style.backgroundColor = "#" + val("bgR") + val("bgG") + val("bgB")
+        }
+    </script>
+</body>
+</html>

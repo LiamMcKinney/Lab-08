@@ -1,0 +1,9 @@
+body {
+    background-color: gray;
+}
+
+a:hover {
+    font-size: x-large;
+    color:azure;
+    background-image:radial-gradient(closest-side,lightblue, gray);
+}

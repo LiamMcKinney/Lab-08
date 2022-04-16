@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Slide Show</title>
+</head>
+<body>
+    <img id="display" width="300" height="300">
+    <br>
+    <button onclick="prev()">Previous</button>
+    <button onclick="next()">Next</button>
+
+    <script>
+        let idx = 0;
+        let img = document.getElementById("display");
+
+        updateImg()
+
+        function updateImg(){
+            img.src = "images/img"+idx+".png";
+        }
+
+        function prev(){
+            idx = (idx+4) % 5
+            updateImg()
+        }
+
+        function next(){
+            idx = (idx+1) % 5
+            updateImg()
+        }
+    </script>
+</body>
+</html>
